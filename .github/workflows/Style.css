@@ -1,1 +1,88 @@
 
+/* Universal Reset and Box Sizing */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Deep background emphasizes light/shadow contrast */
+    background-color: #111111; 
+    color: #DDDDDD;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Application Wrapper for centering and layout */
+#application-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #E6E6FA; /* Light purple for emphasis */
+    margin-bottom: 5px;
+}
+
+/* Container for the p5.js canvas */
+#canvas-container {
+    border: 1px solid #333333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Styling the Control Panel */
+#controls-panel {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #222222;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #AAAAAA;
+}
+
+/* Styling the p5.js generated sliders */
+input[type="range"] {
+    width: 100%;
+    /* Custom styling for usability */
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: #333333;
+    border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #FFD700; /* Gold color for focus/interactivity */
+    margin-top: -4px; /* Adjust vertical position */
+    cursor: pointer;
+}
